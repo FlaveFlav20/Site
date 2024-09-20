@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+    background-color: brown;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-top: 0vh;
+    height: 90vh;
+    width: 25vh;
+    flex-shrink: 0;
+    padding: 5vh 0;
+}
+
+.menuButton {
+    background-color: blue;
+    height: 10vh;
+    width: 100%;
+    color: white;
+    margin-bottom: 2vh;
+    border: none;
+    font-size: 2vh;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    margin: 0vh;
+    height: 100vh;
+    width: 175vh;
+    font-size: 10vh;
+}
