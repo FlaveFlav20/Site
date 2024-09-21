@@ -1,72 +1,54 @@
 header {
     display: flex;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 90vh;
     background-color: aqua;
     height: 10vh;
-    width: 100%;
-    font-size: 10vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
     justify-content: center;
 }
 
 .menu {
     display: flex;
-    padding-left: 15vh;
-    padding-right: 15vh;
-    font-size: 10vh;
+    background-color: rgb(153, 13, 13);
+    justify-content: center;
+    width: 100vw;
+    font-size: min(10vh, 10vw);
+    left: 0;
+    right: 0;
+}
+
+body {
+    display: flex;
+    position: fixed;
+    background-color: blue;
+    height: 80vh;
 }
 
 .info {
     display: none;
     position: fixed;
-    top: 10vh;
-    right: 90%;
-    bottom: 10vh;
-    left: 0;
-    bottom: 10vh;
-    height: 80vh;
-    width: 20%;
-    background-color: darkgoldenrod;
-    font-size: 10vh;
+    background-color: cadetblue;
+    font-size: min(10vh, 10vw);
 }
 
 .content {
     display: flex;
     position: fixed;
-    top: 10vh;
-    right: 0;
-    bottom: 10vh;
-    left: 0;
-    height: 80vh;
-    width: 100%;
-    margin-left: 0%;
-    background-color: grey;
-    font-size: 10vh;
+    background-color: darkorange;
+    font-size: min(5vh, 5vw);
 }
 
 footer {
     display: flex;
     position: fixed;
-    bottom: 0vh;
-    left: 0;
-    right: 0;
-    background-color: rgb(30, 255, 0);
     height: 10vh;
-    width: 100%;
-    font-size: 10vh;
+    width: 100vw;
+    background-color: rgb(43, 255, 0);
+    top: 90vh;
+    bottom: 0;
+    left: 0;
     justify-content: center;
-}
-
-body {
-    display: flex;
-    flex-direction: row;
-    margin-top: 10vh;
-    margin-bottom: 0vh;
-    margin-left: 0%;
-    margin-right: 0%;
-    min-height: 100vh;
-    background-color: darkslateblue;
+    font-size: min(10vh, 10vw);
 }

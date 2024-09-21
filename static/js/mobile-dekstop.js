@@ -1,105 +1,88 @@
-const info_CSS = document.querySelector('.info');
-const content_CSS = document.querySelector('.content');
+import { content_dekstop, content_mobile, content_info_hide_dekstop, 
+        content_info_hide_mobile, info_mobile, info_dekstop } from "./global_var.js";
+
+// "Height" "Width" "Margin Top" "Margin Right" "Margin Bottom" "Margin left"
+
 const header_CSS = document.querySelector('header');
 const footer_CSS = document.querySelector('footer');
 
-const info = document.getElementById("info");
-info.style.display ='none'
+function set_parameters(elem, array) {
+    elem.style.height = array[0];
+    elem.style.width = array[1];
+    elem.style.top = array[2];
+    elem.style.right = array[3];
+    elem.style.bottom = array[4];
+    elem.style.left = array[5];
+
+    //elem.style.fontSize = window.is_dekstop ? window.size_text_dekstop : window.size_text_mobile;
+}
+
 const content = document.getElementById("content");
-const button_menu = document.getElementById("button_display_menu");
 
-export function set_display_info()
-{
-    is_info_display = true
-    console.log("Bahahaha1");
-    if (is_dekstop) {
-        content_CSS.style.width = content_dekstop[1];
-        content_CSS.style.left = content_dekstop[5];
-        return;
-    }
-    content_CSS.style.top = content_mobile[2];
-    content_CSS.style.height = content_mobile[0];
-}
-
-export function set_close_info()
-{
-    is_info_display = false
-    console.log("Bahahaha");
-    if (is_dekstop) {
-        content_CSS.style.width = content_info_hide_dekstop[1];
-        content_CSS.style.left = content_info_hide_dekstop[5];
-        return;
-    }
-    content_CSS.style.height = content_info_hide_mobile[0];
-    content_CSS.style.top = content_info_hide_mobile[2];
-}
-
-export function set_dekstop() {
-    var size = Math.trunc(get_size(viewportWidth, viewportHeight, 3)) + 'vh'
-    document.querySelectorAll('.menu').forEach(function(menu) {
-        menu.style.fontSize = size;
-        menu.style.paddingLeft = size;
-        menu.style.paddingRight = size;
-    });
-    info_CSS.style.fontSize = size;
-    content_CSS.style.fontSize = size;
-    header_CSS.style.fontSize = size;
-    footer_CSS.style.fontSize = size;
-    console.log("Dekstop");
-
-    info_CSS.style.height = info_dekstop[0];
-    info_CSS.style.width = info_dekstop[1];
-    info_CSS.style.top = info_dekstop[2];
-    info_CSS.style.right = info_dekstop[3];
-    info_CSS.style.bottom = info_dekstop[4];
-    info_CSS.style.left = info_dekstop[5];
-
-    content_CSS.style.height = content_dekstop[0];
-    content_CSS.style.width = content_dekstop[1];
-    content_CSS.style.top = content_dekstop[2];
-    content_CSS.style.right = content_dekstop[3];
-    content_CSS.style.bottom = content_dekstop[4];
-    content_CSS.style.left = content_dekstop[5];
-
-    if (is_info_display) {
-        set_display_info()
+function set_display_info() {
+    window.is_info_open = true;
+    info.style.display = 'flex';
+    if (window.is_dekstop) {
+        set_parameters(content, content_dekstop);
     }
     else {
-        set_close_info()
+        set_parameters(content, content_mobile);
     }
 }
 
-export function set_mobile() {
-    var size = Math.trunc(get_size(viewportWidth, viewportHeight, 3)) + 'vw'
-    document.querySelectorAll('.menu').forEach(function(menu) {
-        menu.style.fontSize = size;
-        menu.style.paddingLeft = size;
-        menu.style.paddingRight = size;
-    });
-    info_CSS.style.fontSize = size;
-    content_CSS.style.fontSize = size;
-    header_CSS.style.fontSize = size;
-    footer_CSS.style.fontSize = size;
-    console.log("Mobile");
-
-    info_CSS.style.height = info_mobile[0];
-    info_CSS.style.width = info_mobile[1];
-    info_CSS.style.top = info_mobile[2];
-    info_CSS.style.right = info_mobile[3];
-    info_CSS.style.bottom = info_mobile[4];
-    info_CSS.style.left = info_mobile[5];
-
-    content_CSS.style.height = content_mobile[0];
-    content_CSS.style.width = content_mobile[1];
-    content_CSS.style.top = content_mobile[2];
-    content_CSS.style.right = content_mobile[3];
-    content_CSS.style.bottom = content_mobile[4];
-    content_CSS.style.left = content_mobile[5];
-
-    if (is_info_display) {
-        set_display_info()
+function set_close_info() {
+    window.is_info_open = false;
+    info.style.display == 'none'
+    if (window.is_dekstop) {
+        set_parameters(content, content_info_hide_dekstop);
     }
     else {
-        set_close_info()
+        set_parameters(content, content_info_hide_mobile);
     }
+}
+
+const info = document.getElementById("info");
+
+function set_mobile() {
+    /*info.style.fontSize = window.size_text_mobile;
+    content.style.fontSize = window.size_text_mobile;
+    header_CSS.fontSize = window.size_text_mobile;
+    footer_CSS.fontSize = window.size_text_mobile;*/
+    window.is_dekstop = false;
+    set_parameters(info, info_mobile);
+
+    if (window.is_info_open) {
+        info.style.display = 'flex';
+        set_display_info();
+    }
+    else {
+        info.style.display = 'none';
+        set_close_info();
+    }
+}
+
+function set_dekstop() {
+    /*info.style.fontSize = window.size_text_dekstop;
+    content.style.fontSize = window.size_text_dekstop;
+    header_CSS.fontSize = window.size_text_dekstop;
+    footer_CSS.fontSize = window.size_text_dekstop;*/
+    window.is_dekstop = true;
+    set_parameters(info, info_dekstop);
+
+    if (window.is_info_open) {
+        info.style.display = 'flex';
+        set_display_info();
+    }
+    else {
+        info.style.display = 'none';
+        set_close_info();
+    }
+}
+
+export {
+    set_parameters,
+    set_display_info,
+    set_close_info,
+    set_dekstop,
+    set_mobile
 }
