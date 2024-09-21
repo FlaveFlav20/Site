@@ -66,6 +66,14 @@ const info = document.getElementById("info");
 function set_mobile() {
     window.is_dekstop = false;
     set_parameters(info, info_mobile);
+    info.style.flexDirection = 'row';
+    info.style.justifyContent = 'center';
+    document.querySelectorAll('.elem_info').forEach(function(elem_info) {
+        elem_info.style.paddingLeft = '5vw';
+        elem_info.style.paddingRight = '5vw';
+        elem_info.style.paddingTop = '0';
+        elem_info.style.paddingBottom = '0';
+    });
 
     if (window.is_info_open) {
         info.style.display = 'flex';
@@ -84,6 +92,14 @@ function set_mobile() {
 function set_dekstop() {
     window.is_dekstop = true;
     set_parameters(info, info_dekstop);
+    info.style.flexDirection = 'column';
+    info.style.justifyContent = 'start';
+    document.querySelectorAll('.elem_info').forEach(function(elem_info) {
+        elem_info.style.paddingLeft = '0';
+        elem_info.style.paddingRight = '0';
+        elem_info.style.paddingTop = '5vh';
+        elem_info.style.paddingBottom = '5vh';
+    });
 
     if (window.is_info_open) {
         info.style.display = 'flex';
