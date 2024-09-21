@@ -6,6 +6,11 @@ import { content_dekstop, content_mobile, content_info_hide_dekstop,
 const header_CSS = document.querySelector('header');
 const footer_CSS = document.querySelector('footer');
 
+/*
+    set_parameters : to easyly set parameters to deal with mobile/dekstop display
+        arg: HTML element + array ("Height" "Width" "Margin Top" "Margin Right" "Margin Bottom" "Margin left")
+*/
+
 function set_parameters(elem, array) {
     elem.style.height = array[0];
     elem.style.width = array[1];
@@ -14,8 +19,13 @@ function set_parameters(elem, array) {
     elem.style.bottom = array[4];
     elem.style.left = array[5];
 
-    //elem.style.fontSize = window.is_dekstop ? window.size_text_dekstop : window.size_text_mobile;
 }
+
+/*
+    set_display_info:
+        - arg: none
+        - To display content section whenn info section is here by dealing with mobile/dekstop display
+*/
 
 const content = document.getElementById("content");
 
@@ -30,6 +40,12 @@ function set_display_info() {
     }
 }
 
+/*
+    set_display_info:
+        - arg: none
+        - To display content section whenn info section is NOT here by dealing with mobile/dekstop display
+*/
+
 function set_close_info() {
     window.is_info_open = false;
     info.style.display == 'none'
@@ -41,13 +57,13 @@ function set_close_info() {
     }
 }
 
+/*
+    set_mobile: Set all parameters for mobile display
+*/
+
 const info = document.getElementById("info");
 
 function set_mobile() {
-    /*info.style.fontSize = window.size_text_mobile;
-    content.style.fontSize = window.size_text_mobile;
-    header_CSS.fontSize = window.size_text_mobile;
-    footer_CSS.fontSize = window.size_text_mobile;*/
     window.is_dekstop = false;
     set_parameters(info, info_mobile);
 
@@ -61,11 +77,11 @@ function set_mobile() {
     }
 }
 
+/*
+    set_dekstop: Set all parameters for dekstop display
+*/
+
 function set_dekstop() {
-    /*info.style.fontSize = window.size_text_dekstop;
-    content.style.fontSize = window.size_text_dekstop;
-    header_CSS.fontSize = window.size_text_dekstop;
-    footer_CSS.fontSize = window.size_text_dekstop;*/
     window.is_dekstop = true;
     set_parameters(info, info_dekstop);
 

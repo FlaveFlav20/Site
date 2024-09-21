@@ -9,8 +9,17 @@ const content_mobile = ['70vh', '100%', '20vh', '0%', '10vh', '0%'];
 const content_info_hide_dekstop = ['80vh', '100%', '10vh', '0%', '10vh', '0%'];
 const content_info_hide_mobile = ['80vh', '100%', '10vh', '0%', '10vh', '0%'];
 
+/*
+    Those array will be used with the function set_parameters -> less code to write
+*/
+
 window.is_dekstop = true;
 window.is_info_open = false;
+
+/*
+    We must know if we have a dekstop or a mobile by displaying
+    We must know if the info bar (left) is displaying
+*/
 
 export {
     info_dekstop,
