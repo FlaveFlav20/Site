@@ -7,12 +7,12 @@
 - [Explaination](#Explaination)
 - [Dekstop display](#Dekstop-display)
 - [Mobil display](#Mobil-display)
-- 
+- [Traduction](#Traduction)
 - [Project structure](#Project-structure)
 
 ## Intro
 
-I created this project to have a CV. The main goal is to be responsive, easy to unserstand and kind to use.
+I created this project to have a CV. The main goal is to be responsive, easy to understand and kind to use.
 
 ## How-to-start?
 

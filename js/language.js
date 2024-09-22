@@ -1,12 +1,11 @@
 import { lang_url,elem_to_change_id } from "./global_var.js"
-
+import { set_elem_network_info } from "./mobile-dekstop.js";
 
 /*
     language => Get browser lang
 */
 
 const language = navigator.language || navigator.userLanguage;
-console.log('Language preference:', language);
 
 /*
     Apply browther lang
@@ -92,6 +91,7 @@ async function set_lang() {
         let response = await find_content(elem_to_change_id[i]);
         elem.value = response;
         elem.innerHTML = response;
+        set_elem_network_info();
     }
 }
 

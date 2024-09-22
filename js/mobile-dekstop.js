@@ -57,6 +57,28 @@ function set_close_info() {
 }
 
 /*
+*/
+
+function set_elem_network_info() {
+    if (window.is_dekstop) {
+        document.querySelectorAll('.elem_info').forEach(function(elem_info) {
+            elem_info.style.paddingLeft = '0';
+            elem_info.style.paddingRight = '0';
+            elem_info.style.paddingTop = '5vh';
+            elem_info.style.paddingBottom = '0';
+        });
+    }
+    else {
+        document.querySelectorAll('.elem_info').forEach(function(elem_info) {
+            elem_info.style.paddingLeft = '5vw';
+            elem_info.style.paddingRight = '5vw';
+            elem_info.style.paddingTop = '0';
+            elem_info.style.paddingBottom = '0';
+        });
+    }
+}
+
+/*
     set_mobile: Set all parameters for mobile display
 */
 
@@ -69,12 +91,8 @@ function set_mobile() {
     set_parameters(info, info_mobile);
     info.style.flexDirection = 'row';
     info.style.justifyContent = 'center';
-    document.querySelectorAll('.elem_info').forEach(function(elem_info) {
-        elem_info.style.paddingLeft = '5vw';
-        elem_info.style.paddingRight = '5vw';
-        elem_info.style.paddingTop = '0';
-        elem_info.style.paddingBottom = '0';
-    });
+    
+    set_elem_network_info();
 
     if (window.is_info_open) {
         info.style.display = 'flex';
@@ -96,12 +114,8 @@ function set_dekstop() {
     set_parameters(info, info_dekstop);
     info.style.flexDirection = 'column';
     info.style.justifyContent = 'start';
-    document.querySelectorAll('.elem_info').forEach(function(elem_info) {
-        elem_info.style.paddingLeft = '0';
-        elem_info.style.paddingRight = '0';
-        elem_info.style.paddingTop = '5vh';
-        elem_info.style.paddingBottom = '5vh';
-    });
+
+    set_elem_network_info();
 
     if (window.is_info_open) {
         info.style.display = 'flex';
@@ -120,5 +134,6 @@ export {
     set_display_info,
     set_close_info,
     set_dekstop,
-    set_mobile
+    set_mobile,
+    set_elem_network_info
 }

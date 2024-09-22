@@ -1,5 +1,6 @@
 import { get_lang_file, set_lang } from "./language.js";
 import { find_content } from "./language.js";
+import { set_elem_network_info } from "./mobile-dekstop.js";
 
 /*
     button_home.addEventListener: To trigger the home button and activate info/network section
@@ -16,14 +17,14 @@ button_info_network.addEventListener("click", async function() {
         window.is_info = false;
         button_info_network.innerHTML = await find_content("network button");
         info.innerHTML = await find_content("main-content");
-        return;
     }
     else {
         window.is_info = true;
         button_info_network.innerHTML = await find_content("main button");
         info.innerHTML = await find_content("network-content");
-        return;
     }
+
+    set_elem_network_info()
 });
 
 /*
@@ -59,4 +60,18 @@ lang_en_EN.addEventListener("click", async function() {
     await get_lang_file();
     await set_lang();
     lang_win.style.display = 'none';
+});
+
+/*
+    document.addEventListener: Close lang selection if a click was detected somewhere else
+*/
+
+document.addEventListener('click', function(event) {
+    document.addEventListener('click', function(event) {
+        if (!(event.target.tagName === 'DIV'))
+            return;
+        if (event.target.id === "fr_FR" || event.target.id === "en_EN" || event.target.id === "lang button")
+            return;
+        lang_win.style.display = 'none';
+    });
 });

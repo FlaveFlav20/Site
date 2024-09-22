@@ -19,8 +19,8 @@ header {
     width: 100vw;
     justify-content: center;
     user-select: none; 
-    border-bottom-left-radius: 2%;
-    border-bottom-right-radius: 2%;
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 1%;
     color: black;
 }
 
@@ -46,22 +46,40 @@ body {
     object-fit: contain;
 }
 
+.flags {
+    display: flex;
+    position: inherit;
+    right: 0;
+    height: min(5vh, 5vw);
+    object-fit: contain;
+    border-radius: 15%;
+}
+
 .select-lang {
     display: none;
     position: fixed;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     top: 5vh;
-    right: 23vw;
-    font-size: min(5vh, 5vw);
+    right: 0;
+    font-size: min(4vh, 4vw);
     user-select: none; 
-    border-radius: 5%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
 }
 
 .elem-select-lang {
     background-color: rgb(255, 255, 255);
+    align-items: inherit;
+    justify-content: inherit;
     color: black;
-    border-radius: inherit;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 5vw, 5vh;
+    height: 5vh;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
 }
 
 .elem-select-lang:hover {
@@ -77,16 +95,14 @@ body {
     font-size: min(4vh, 4vw);
     color: white;
     background-color: #04090f;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
 }
 
 .elem_info {
     display: inherit;
     position: relative;
     font-size: inherit;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
 }
 
 .content {
