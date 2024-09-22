@@ -2,21 +2,21 @@ header {
     display: flex;
     position: fixed;
     background-color: aqua;
-    height: 10vh;
     width: 100vw;
     top: 0;
+    font-size: min(8vh, 8vw);
     left: 0;
-    font-size: min(10vh, 10vw);
+    right: 0;
 }
 
 .menu {
     display: flex;
-    align-items: center;
     background-color: rgb(153, 13, 13);
-    justify-content: center;
+    font-size: inherit;
+    height: 10vh;
+    right: 5vw;
     width: 100vw;
-    left: 0;
-    right: 0;
+    justify-content: center;
 }
 
 body {
@@ -26,24 +26,44 @@ body {
     height: 80vh;
 }
 
+.select-lang {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    background-color: crimson;
+    top: 10vh;
+    right: 10vw;
+    font-size: min(5vh, 5vw);
+}
+
+.elem-select-lang {
+    display: inherit;
+    position: inherit;
+    flex-direction: column;
+    background-color: crimson;
+}
+
 .info {
     display: none;
     position: fixed;
     background-color: cadetblue;
+    font-size: min(5vh, 5vw);;
 }
 
 .elem_info {
     display: inherit;
     position: relative;
     background-color: darkgreen;
-    font-size: min(5vh, 5vw);
+    font-size: inherit
 }
 
 .content {
     display: flex;
+    flex-direction: column;
     position: fixed;
     background-color: darkorange;
     font-size: min(5vh, 5vw);
+    padding-left: 2vw;
 }
 
 footer {

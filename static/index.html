@@ -5,28 +5,31 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <header>
-    <div class="menu" id="button_display_menu">
-        Infos
+    <div class="menu" id="info button">
     </div>
-    <div class="menu">
-        CV
+    <div class="menu" id="network button">
     </div>
-    <div class="menu">
-        Réseaux
+    <div class="menu" id="lang button">
     </div>
 </header>
 <body>
     <div class="info" id="info" hidden="hidden">
-            <div class="elem_info">Name</div>
-            <div class="elem_info">NickName</div>
-            <div class="elem_info">+33 202020202</div>
+            <div class="elem_info" id="name"></div>
+            <div class="elem_info" id="surname"></div>
+            <div class="elem_info" id="phone"></div>
     </div>
     <div class="content" id="content">
-        Content
     </div>
-    <footer>
-        A propos
+    <footer id="bottom">
     </footer>
+    <div class="select-lang" id="language">
+        <div id="fr_FR">
+            FR
+        </div>
+        <div id="en_EN">
+            EN
+        </div>
+    </div>
 </body>
 <script src="app.js" type="module"></script>
 </html>
