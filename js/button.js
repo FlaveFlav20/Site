@@ -2,25 +2,25 @@ import { get_lang_file, set_lang } from "./language.js";
 import { find_content } from "./language.js";
 
 /*
-    button_home.addEventListener: To trigger the home button and activate info section
+    button_home.addEventListener: To trigger the home button and activate info/network section
 */
 
 window.is_info = false;
 
 const info = document.getElementById("main-content");
 
-const button_network = document.getElementById("network button");
-button_network.addEventListener("click", async function() {
+const button_info_network = document.getElementById("network button");
+button_info_network.addEventListener("click", async function() {
 
     if (window.is_info) {
         window.is_info = false;
-        button_network.innerHTML = await find_content("network button");
+        button_info_network.innerHTML = await find_content("network button");
         info.innerHTML = await find_content("main-content");
         return;
     }
     else {
         window.is_info = true;
-        button_network.innerHTML = await find_content("main button");
+        button_info_network.innerHTML = await find_content("main button");
         info.innerHTML = await find_content("network-content");
         return;
     }

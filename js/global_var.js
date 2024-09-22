@@ -1,3 +1,7 @@
+/*
+    Those array will be used with the function set_parameters -> less code to write
+*/
+
 // "Height" "Width" "Margin Top" "Margin Right" "Margin Bottom" "Margin left"
 
 const info_dekstop = ['90vh', '20vw', '5vh', '90vw', '10vh', '0'];
@@ -12,11 +16,16 @@ const image_mobile = ["15vh", "100vw", "75vh", "0", "10vh", "30vw"]
 const elem_to_change_id = ["main-content", "content", "bottom", "network button", "lang button"];
 
 /*
-    Those array will be used with the function set_parameters -> less code to write
+    is_dekstop => To deal with dekstop/mobil view
+    is_info_open => To deal with info/network section switching
 */
 
 window.is_dekstop = true;
 window.is_info_open = true;
+
+/*
+    lang_url => where the program will get traduction
+*/
 
 const lang_url = "http://localhost:3000/content/"
 

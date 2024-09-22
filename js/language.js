@@ -1,8 +1,16 @@
 import { lang_url,elem_to_change_id } from "./global_var.js"
 
 
+/*
+    language => Get browser lang
+*/
+
 const language = navigator.language || navigator.userLanguage;
 console.log('Language preference:', language);
+
+/*
+    Apply browther lang
+*/
 
 const regex = /^fr_*/i;
 
@@ -10,6 +18,10 @@ if (regex.test(language))
     window.lang = "fr_FR"
 else
     window.lang = "en_EN"
+
+/*
+    Call the lang_url endpoint to get translation file, and stock it into file_lang
+*/
 
 let file_lang = []
 
@@ -31,6 +43,12 @@ async function get_lang_file() {
     console.error(error.message);
   }
 }
+
+/*
+    find_content: To find traduction into file_lang
+        - parameter: id (of file_lang)
+        - return: traduction(string)
+*/
 
 async function find_content(id) {
     for (let i = 0; i < file_lang.length; i++) {
