@@ -17,6 +17,11 @@ header {
     right: 5vw;
     width: 100vw;
     justify-content: center;
+    user-select: none; 
+}
+
+.menu:hover {
+    background-color: rgb(255, 255, 255);
 }
 
 body {
@@ -34,13 +39,15 @@ body {
     top: 10vh;
     right: 10vw;
     font-size: min(5vh, 5vw);
+    user-select: none; 
 }
 
 .elem-select-lang {
-    display: inherit;
-    position: inherit;
-    flex-direction: column;
     background-color: crimson;
+}
+
+.elem-select-lang:hover {
+    background-color: rgb(253, 253, 253);
 }
 
 .info {

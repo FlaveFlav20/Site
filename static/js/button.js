@@ -1,10 +1,10 @@
 import { set_close_info, set_display_info } from "./mobile-dekstop.js";
 import { get_lang_file, set_lang } from "./language.js";
+import { find_content } from "./language.js";
 
 /*
     button_home.addEventListener: To trigger the home button and activate info section
 */
-
 
 const button_home = document.getElementById("info button");
 button_home.addEventListener("click", function() {
@@ -14,6 +14,25 @@ button_home.addEventListener("click", function() {
     else {
         set_display_info()
     }
+});
+
+/*
+    button_home.addEventListener: To trigger the home button and activate info section
+*/
+
+const content = document.getElementById("content");
+const button_network = document.getElementById("network button");
+button_network.addEventListener("click", async function() {
+    if (button_network.innerHTML === await find_content("network button")) {
+        let network_content = await find_content("network-content");
+        button_network.innerHTML = await find_content("main button");
+        content.innerHTML = network_content;
+        return;
+    }
+    let content_buffer = await find_content("content");
+    button_network.innerHTML = await find_content("network button");
+    content.innerHTML = content_buffer;
+    return;
 });
 
 /*
@@ -37,6 +56,7 @@ lang_fr_FR.addEventListener("click", async function() {
     window.lang = "fr_FR";
     await get_lang_file();
     await set_lang();
+    lang_win.style.display = 'none';
 });
 
 const lang_en_EN = document.getElementById("en_EN");
@@ -47,4 +67,5 @@ lang_en_EN.addEventListener("click", async function() {
     window.lang = "en_EN";
     await get_lang_file();
     await set_lang();
+    lang_win.style.display = 'none';
 });

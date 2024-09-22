@@ -6,3 +6,5 @@ bottom:raw:About
 info button:raw:Info
 lang button:raw:lang
 network button:raw:Network
+main button:raw:Home
+network-content:file:network-content

@@ -19,6 +19,10 @@ app.get("/content/*", (req, res) => {
   res.sendFile(path.join(__dirname, 'contents', req.params[0]));
 });
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '404_NOTFOUND.html'));
+});
+
 
 // Start the server
 app.listen(port, () => {

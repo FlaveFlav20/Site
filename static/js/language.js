@@ -70,5 +70,6 @@ async function set_lang() {
 
 export {
     get_lang_file,
-    set_lang
+    set_lang,
+    find_content
 }
