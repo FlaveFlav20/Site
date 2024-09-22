@@ -51,8 +51,8 @@ body {
     position: fixed;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
-    top: 6vh;
-    right: 2vw;
+    top: 5vh;
+    right: 23vw;
     font-size: min(5vh, 5vw);
     user-select: none; 
     border-radius: 5%;
