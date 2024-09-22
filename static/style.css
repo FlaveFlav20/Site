@@ -1,76 +1,102 @@
 header {
     display: flex;
     position: fixed;
-    background-color: aqua;
+    background-color: #1d1e20;
     width: 100vw;
     top: 0;
-    font-size: min(8vh, 8vw);
+    font-size: min(5vh, 5vw);
     left: 0;
     right: 0;
 }
 
 .menu {
     display: flex;
-    background-color: rgb(153, 13, 13);
+    background-color: white;
+    align-items: center;
     font-size: inherit;
-    height: 10vh;
+    height: 5vh;
     right: 5vw;
     width: 100vw;
     justify-content: center;
     user-select: none; 
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+    color: black;
 }
 
 .menu:hover {
     background-color: rgb(255, 255, 255);
+    color: white;
+    background-color: #3e3e41;
 }
 
 body {
     display: flex;
     position: fixed;
-    background-color: blue;
     height: 80vh;
+    background-color: #060E19;
+}
+
+.photo {
+    display: flex;
+    position: inherit;
+    right: 10vh;
+    width: min(25vh, 25vw);
+    height: min(45vh, 45vw);
+    object-fit: contain;
 }
 
 .select-lang {
     display: none;
     position: fixed;
     flex-direction: column;
-    background-color: crimson;
-    top: 10vh;
-    right: 10vw;
+    background-color: rgb(255, 255, 255);
+    top: 6vh;
+    right: 2vw;
     font-size: min(5vh, 5vw);
     user-select: none; 
+    border-radius: 5%;
 }
 
 .elem-select-lang {
-    background-color: crimson;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: inherit;
 }
 
 .elem-select-lang:hover {
-    background-color: rgb(253, 253, 253);
+    background-color: #3e3e41;
+    color: white;
 }
 
 .info {
     display: none;
     position: fixed;
-    background-color: cadetblue;
-    font-size: min(5vh, 5vw);;
+    align-items: center;
+    justify-content: center;
+    font-size: min(4vh, 4vw);
+    color: white;
+    background-color: #04090f;
 }
 
 .elem_info {
     display: inherit;
     position: relative;
-    background-color: darkgreen;
-    font-size: inherit
+    font-size: inherit;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     position: fixed;
-    background-color: darkorange;
-    font-size: min(5vh, 5vw);
-    padding-left: 2vw;
+    font-size: min(3vh, 3vw);
+    padding-left: 1vw;
+    color: white;
+    background-color: #060E19;
 }
 
 footer {
@@ -78,10 +104,47 @@ footer {
     position: fixed;
     height: 5vh;
     width: 100vw;
-    background-color: rgb(43, 255, 0);
+    background-color: rgb(192, 192, 192);
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
     top: 95vh;
     bottom: 0;
     left: 0;
     justify-content: center;
-    font-size: min(5vh, 5vw);
+    font-size: min(3vh, 3vw);
 }
+
+.not-found {
+    display: flex;
+    position: fixed;
+    background-color: #060E19;
+    color: white;
+    justify-content: center;
+    top: 45vh;
+    bottom: 45vh;
+    left: 30vw;
+    right: 30vw;
+    font-size: min(7vh, 4vw);
+}
+
+a:link {
+    color: rgb(120, 120, 120);
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(120, 120, 120);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(255, 255, 255);
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgb(0, 0, 0);
+  }
+
+  

@@ -1,4 +1,3 @@
-import { set_close_info, set_display_info } from "./mobile-dekstop.js";
 import { get_lang_file, set_lang } from "./language.js";
 import { find_content } from "./language.js";
 
@@ -6,33 +5,25 @@ import { find_content } from "./language.js";
     button_home.addEventListener: To trigger the home button and activate info section
 */
 
-const button_home = document.getElementById("info button");
-button_home.addEventListener("click", function() {
-    if (window.is_info_open) {
-        set_close_info()
-    }
-    else {
-        set_display_info()
-    }
-});
+window.is_info = false;
 
-/*
-    button_home.addEventListener: To trigger the home button and activate info section
-*/
+const info = document.getElementById("main-content");
 
-const content = document.getElementById("content");
 const button_network = document.getElementById("network button");
 button_network.addEventListener("click", async function() {
-    if (button_network.innerHTML === await find_content("network button")) {
-        let network_content = await find_content("network-content");
-        button_network.innerHTML = await find_content("main button");
-        content.innerHTML = network_content;
+
+    if (window.is_info) {
+        window.is_info = false;
+        button_network.innerHTML = await find_content("network button");
+        info.innerHTML = await find_content("main-content");
         return;
     }
-    let content_buffer = await find_content("content");
-    button_network.innerHTML = await find_content("network button");
-    content.innerHTML = content_buffer;
-    return;
+    else {
+        window.is_info = true;
+        button_network.innerHTML = await find_content("main button");
+        info.innerHTML = await find_content("network-content");
+        return;
+    }
 });
 
 /*

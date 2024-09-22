@@ -1,6 +1,15 @@
 import { lang_url,elem_to_change_id } from "./global_var.js"
 
-window.lang = "fr_FR"
+
+const language = navigator.language || navigator.userLanguage;
+console.log('Language preference:', language);
+
+const regex = /^fr_*/i;
+
+if (regex.test(language))
+    window.lang = "fr_FR"
+else
+    window.lang = "en_EN"
 
 let file_lang = []
 
@@ -34,7 +43,7 @@ async function find_content(id) {
         }
         else if (line[0] === id && line[1] === "file") {
             try {
-                let response = await fetch(lang_url + "file/" + id + "_" + window.lang + ".html");
+                let response = await fetch(lang_url + "file/" + line[2] + "_" + window.lang + ".html");
                 try {
                     return await response.text();
                 } catch {

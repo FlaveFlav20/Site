@@ -1,5 +1,4 @@
-import { content_dekstop, content_mobile, content_info_hide_dekstop, 
-        content_info_hide_mobile, info_mobile, info_dekstop } from "./global_var.js";
+import { content_dekstop, content_mobile, info_mobile, info_dekstop, image_mobile, image_dekstop } from "./global_var.js";
 
 // "Height" "Width" "Margin Top" "Margin Right" "Margin Bottom" "Margin left"
 
@@ -61,7 +60,9 @@ function set_close_info() {
     set_mobile: Set all parameters for mobile display
 */
 
-const info = document.getElementById("info");
+const picture = document.getElementById("photo");
+const info = document.getElementById("main-content");
+const photo = document.getElementById("photo");
 
 function set_mobile() {
     window.is_dekstop = false;
@@ -83,6 +84,7 @@ function set_mobile() {
         info.style.display = 'none';
         set_close_info();
     }
+    set_parameters(picture, image_mobile);
 }
 
 /*
@@ -109,6 +111,8 @@ function set_dekstop() {
         info.style.display = 'none';
         set_close_info();
     }
+
+    set_parameters(picture, image_dekstop);
 }
 
 export {
