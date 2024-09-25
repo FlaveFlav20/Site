@@ -90,11 +90,11 @@ content_en_EN.html
 - **robot.txt**: For google robot
 - **index.html**: The main html page
 - **style.css**: For index.html
-- **main.js**: This script will call all other script
-- **js/button.js**: To handle with click (menu)
-- **js/global_var**: To put all hardcoded values
-- **js/language.js**: To have a website with multiple language
-- **js/mobile-dekstop.js**: To deal with Dekstop/Mobil display
-- **js/contents/**: a directory for **language.js** with [Traduction](#Traduction)
+- **scripts:main.js**: This script will call all other script
+- **scripts/button.js**: To handle with click (menu)
+- **scripts/global_var**: To put all hardcoded values
+- **scripts/language.js**: To have a website with multiple language
+- **scripts/mobile-dekstop.js**: To deal with Dekstop/Mobil display
+- **scripts/contents/**: a directory for **language.js** with [Traduction](#Traduction)
 
 

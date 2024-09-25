@@ -1,7 +1,6 @@
-import { set_dekstop, set_mobile } from "./js/mobile-dekstop.js";
-import { get_lang_file, set_lang } from "./js/language.js";
-import "./js/button.js"
-import { set_elem_network_info } from "./js/mobile-dekstop.js";
+import { set_dekstop, set_mobile } from "./mobile-dekstop.js";
+import { get_lang_file, set_lang } from "./language.js";
+import "./button.js"
 /*
     First, we check if we have a dekstop/device display, and we display it
 */
