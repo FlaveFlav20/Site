@@ -118,9 +118,10 @@ body {
 footer {
     display: flex;
     position: fixed;
+    align-items: center;
     height: 5vh;
     width: 100vw;
-    background-color: rgb(192, 192, 192);
+    background-color: rgb(255, 255, 255);
     border-top-left-radius: 15%;
     border-top-right-radius: 15%;
     top: 95vh;
