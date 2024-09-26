@@ -8,10 +8,10 @@ const info_dekstop = ['90vh', '20vw', '5vh', '90vw', '10vh', '0'];
 const info_mobile = ['5vh', '100vw', '5vh', '0', '80vh', '0'];
 
 const content_dekstop = ['90vh', '55vw', '5vh', '20vw', '10vh', '20vw'];
-const content_mobile = ['85vh', '100vw', '11vh', '0', '5vh', '0'];
+const content_mobile = ['90vh', '100vw', '11vh', '0', '5vh', '0'];
 
 const image_dekstop = ["90vh", "15vw", "5vh", "0", "5vh", "80vw"]
-const image_mobile = ["15vh", "100vw", "75vh", "0", "10vh", "30vw"]
+const image_mobile = ["15vh", "20vw", "80vh", "10vw", "5vh", "75vw"]
 
 const elem_to_change_id = ["main-content", "content", "bottom", "network button", "lang button"];
 

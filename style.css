@@ -4,19 +4,19 @@ header {
     background-color: #1d1e20;
     width: 100vw;
     top: 0;
-    font-size: min(5vh, 5vw);
+    font-size: min(4vh, 4vw);
     left: 0;
     right: 0;
 }
 
 .menu {
     display: flex;
-    background-color: white;
+    background-color: rgb(230, 230, 230);
     align-items: center;
     font-size: inherit;
     height: 5vh;
     right: 5vw;
-    width: 100vw;
+    width: 20vw;
     justify-content: center;
     user-select: none; 
     border-bottom-left-radius: 3%;
@@ -30,16 +30,31 @@ header {
     background-color: #3e3e41;
 }
 
+.menu-blank {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    font-size: inherit;
+    height: 5vh;
+    right: 5vw;
+    width: 60vw;
+    justify-content: center;
+    user-select: none; 
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 1%;
+    color: black;
+}
+
 body {
     display: flex;
     position: fixed;
-    height: 80vh;
+    height: 150vh;
     background-color: #060E19;
 }
 
 .photo {
     display: flex;
-    position: inherit;
+    position: fixed;
     right: 10vh;
     width: min(25vh, 25vw);
     height: min(45vh, 45vw);
@@ -105,6 +120,10 @@ body {
     font-size: inherit;
 }
 
+.content::-webkit-scrollbar {
+    display: none;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -113,6 +132,8 @@ body {
     padding-left: 1vw;
     color: white;
     background-color: #060E19;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
 footer {
