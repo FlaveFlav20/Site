@@ -8,7 +8,7 @@
 - [Dekstop display](#Dekstop-display)
 - [Mobil display](#Mobil-display)
 - [Traduction](#Traduction)
-- [Work environement](#Env)
+- [Work environement](#dev-environnement)
 - [Project structure](#Project-structure)
 
 ## Intro
@@ -25,7 +25,7 @@ or
 ```sh
 node server.js
 ```
-Then, you can go to
+Then, you can open
 ```
 http://localhost:3000/
 ```
@@ -36,7 +36,7 @@ There are 4 sections
 - 1: header with the menu => never move
 - 4: footer with addtitionnal info => never move
 - 2: infos => move when mobile device
-- 3: Content section => will take the free place from infos (3) if diseapears
+- 3: Content section => will take the free place from infos (3) if infos diseapears
 
 ## Dekstop-display
 
@@ -89,11 +89,11 @@ content_en_EN.html
 ```
 "content" is the same content as **??_??** (fr_FR/en_EN)
 
-## Env
+## dev-environnement
 
+- Ubuntu 22.04.5 LTS (22.04, jammy)
 - node: v20.14.0
 - nom: 10.7.0
-- Ubuntu 22.04.5 LTS (22.04, jammy)
 
 ## Project-structure
 
@@ -106,6 +106,4 @@ content_en_EN.html
 - **scripts/global_var**: To put all hardcoded values
 - **scripts/language.js**: To have a website with multiple language
 - **scripts/mobile-dekstop.js**: To deal with Dekstop/Mobil display
-- **scripts/contents/**: a directory for **language.js** with [Traduction](#Traduction)
-
-
+- **scripts/contents/**: a directory for **language.js** with [Traduction]
