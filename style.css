@@ -4,19 +4,19 @@ header {
     background-color: #1d1e20;
     width: 100vw;
     top: 0;
-    font-size: min(5vh, 5vw);
+    font-size: min(4vh, 4vw);
     left: 0;
     right: 0;
 }
 
 .menu {
     display: flex;
-    background-color: white;
+    background-color: rgb(230, 230, 230);
     align-items: center;
     font-size: inherit;
     height: 5vh;
     right: 5vw;
-    width: 100vw;
+    width: 20vw;
     justify-content: center;
     user-select: none; 
     border-bottom-left-radius: 3%;
@@ -28,6 +28,21 @@ header {
     background-color: rgb(255, 255, 255);
     color: white;
     background-color: #3e3e41;
+}
+
+.menu-blank {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    font-size: inherit;
+    height: 5vh;
+    right: 5vw;
+    width: 60vw;
+    justify-content: center;
+    user-select: none; 
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 1%;
+    color: black;
 }
 
 body {

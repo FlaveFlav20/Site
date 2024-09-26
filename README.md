@@ -17,7 +17,7 @@ I created this project to have a CV. The main goal is to be responsive, easy to 
 
 ## How-to-start
 
-You must go to project root and
+You should run
 ```sh
 npm install && npm start
 ```
