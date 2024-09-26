@@ -3,20 +3,25 @@
 
 ## Table of Contents
 - [Intro](#Intro)
-- [How to start?](#How-to-start?)
+- [How to start?](#How-to-start)
 - [Explaination](#Explaination)
 - [Dekstop display](#Dekstop-display)
 - [Mobil display](#Mobil-display)
 - [Traduction](#Traduction)
+- [Work environement](#Env)
 - [Project structure](#Project-structure)
 
 ## Intro
 
 I created this project to have a CV. The main goal is to be responsive, easy to understand and kind to use.
 
-## How-to-start?
+## How-to-start
 
 You must go to project root and
+```sh
+npm install && npm start
+```
+or
 ```sh
 node server.js
 ```
@@ -83,6 +88,12 @@ content_fr_FR.html
 content_en_EN.html
 ```
 "content" is the same content as **??_??** (fr_FR/en_EN)
+
+## Env
+
+- node: v20.14.0
+- nom: 10.7.0
+- Ubuntu 22.04.5 LTS (22.04, jammy)
 
 ## Project-structure
 
