@@ -1,6 +1,7 @@
 import { get_lang_file, set_lang } from "./language.js";
 import { find_content } from "./language.js";
 import { set_elem_network_info } from "./mobile-dekstop.js";
+import { set_display_info, set_close_info } from "./mobile-dekstop.js";
 
 /*
     button_home.addEventListener: To trigger the home button and activate info/network section
@@ -24,7 +25,15 @@ button_info_network.addEventListener("click", async function() {
         info.innerHTML = await find_content("network-content");
     }
 
-    set_elem_network_info()
+    set_elem_network_info();
+});
+
+const display = document.getElementById("display");
+display.addEventListener("click", async function() {
+    if (!window.is_info_open)
+        set_display_info();
+    else
+        set_close_info();
 });
 
 /*
@@ -73,5 +82,7 @@ document.addEventListener('click', function(event) {
         if (event.target.id === "fr_FR" || event.target.id === "en_EN" || event.target.id === "lang button")
             return;
         lang_win.style.display = 'none';
+        if (window.is_info_open && !(event.target.id === 'display')  && !(event.target.id === 'network button'))
+            set_close_info();
     });
 });

@@ -19,8 +19,6 @@ header {
     width: 20vw;
     justify-content: center;
     user-select: none; 
-    border-bottom-left-radius: 3%;
-    border-bottom-right-radius: 1%;
     color: black;
 }
 
@@ -37,11 +35,9 @@ header {
     font-size: inherit;
     height: 5vh;
     right: 5vw;
-    width: 60vw;
+    width: 40vw;
     justify-content: center;
-    user-select: none; 
-    border-bottom-left-radius: 3%;
-    border-bottom-right-radius: 1%;
+    user-select: none;
     color: black;
 }
 
@@ -143,8 +139,8 @@ footer {
     height: 5vh;
     width: 100vw;
     background-color: rgb(255, 255, 255);
-    border-top-left-radius: 15%;
-    border-top-right-radius: 15%;
+    border-top-left-radius: 15vw;
+    border-top-right-radius: 15vw;
     top: 95vh;
     bottom: 0;
     left: 0;
