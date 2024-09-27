@@ -93,6 +93,8 @@ async function set_lang() {
         elem.innerHTML = response;
         set_elem_network_info();
     }
+
+    window.is_info = false;
 }
 
 export {

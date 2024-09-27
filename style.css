@@ -4,14 +4,14 @@ header {
     background-color: #1d1e20;
     width: 100vw;
     top: 0;
-    font-size: min(4vh, 4vw);
+    font-size: min(3vh, 3vw);
     left: 0;
     right: 0;
 }
 
 .menu {
     display: flex;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(255, 255, 255);
     align-items: center;
     font-size: inherit;
     height: 5vh;
@@ -25,7 +25,7 @@ header {
 .menu:hover {
     background-color: rgb(255, 255, 255);
     color: white;
-    background-color: #3e3e41;
+    background-color: #acacb3;
 }
 
 .menu-blank {
@@ -106,8 +106,8 @@ body {
     font-size: min(4vh, 4vw);
     color: white;
     background-color: #04090f;
-    border-top-right-radius: 5%;
-    border-bottom-right-radius: 5%;
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%;    
 }
 
 .elem_info {
@@ -139,8 +139,8 @@ footer {
     height: 5vh;
     width: 100vw;
     background-color: rgb(255, 255, 255);
-    border-top-left-radius: 15vw;
-    border-top-right-radius: 15vw;
+    border-top-left-radius: min(2vh, 2vw);
+    border-top-right-radius: min(2vh, 2vw);
     top: 95vh;
     bottom: 0;
     left: 0;

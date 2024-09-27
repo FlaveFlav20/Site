@@ -1,8 +1,5 @@
 content:file:content
 bottom:raw:A propos
 info button:raw:Info
-lang button:raw:Langue
-network button:raw:Réseau
-main button:raw:Home
 main-content:file:info-content
 network-content:file:network-content

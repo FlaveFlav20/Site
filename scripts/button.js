@@ -16,12 +16,10 @@ button_info_network.addEventListener("click", async function() {
 
     if (window.is_info) {
         window.is_info = false;
-        button_info_network.innerHTML = await find_content("network button");
         info.innerHTML = await find_content("main-content");
     }
     else {
         window.is_info = true;
-        button_info_network.innerHTML = await find_content("main button");
         info.innerHTML = await find_content("network-content");
     }
 
@@ -75,14 +73,27 @@ lang_en_EN.addEventListener("click", async function() {
     document.addEventListener: Close lang selection if a click was detected somewhere else
 */
 
+function close_lang(event) {
+    if (!(event.target.tagName === 'DIV'))
+        return;
+    if (event.target.id === "fr_FR" || event.target.id === "en_EN" || event.target.id === "lang button")
+        return;
+    lang_win.style.display = 'none';
+}
+
+function close_info(event) {
+    if (event.target.id === 'display' || event.target.id === 'network button' 
+        || event.target.id === 'display' || event.target.id === 'main-content')
+        return;
+    if (!(event.target.tagName === 'DIV'))
+        return;
+    if (event.target.id === "fr_FR" || event.target.id === "en_EN" || event.target.id === "lang button")
+        return;
+    if (window.is_info_open)
+        set_close_info();
+}
+
 document.addEventListener('click', function(event) {
-    document.addEventListener('click', function(event) {
-        if (!(event.target.tagName === 'DIV'))
-            return;
-        if (event.target.id === "fr_FR" || event.target.id === "en_EN" || event.target.id === "lang button")
-            return;
-        lang_win.style.display = 'none';
-        if (window.is_info_open && !(event.target.id === 'display')  && !(event.target.id === 'network button'))
-            set_close_info();
-    });
+    close_lang(event);
+    close_info(event);
 });

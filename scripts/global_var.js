@@ -17,12 +17,12 @@ const image_dekstop = ["90vh", "15vw", "5vh", "10vw", "5vh", "80vw"];
 const image_mobile = ["15vh", "15vw", "80vh", "0vw", "5vh", "85vw"];
 
 const button_menu_display = ['5vh', '10vw', '0vh', '70vw', '95vh', '20vw'];
-const button_menu_blank = ['5vh', '80vw', '0vh', '20vw', '95vh', '30vw'];
+const button_menu_blank = ['5vh', '60vw', '0vh', '20vw', '95vh', '30vw'];
 
-const button_menu_blank_hide = ['5vh', '80vw', '0vh', '20vw', '95vh', '10vw'];
+const button_menu_blank_hide = ['5vh', '70vw', '0vh', '20vw', '95vh', '10vw'];
 
 
-const elem_to_change_id = ["main-content", "content", "bottom", "network button", "lang button"];
+const elem_to_change_id = ["main-content", "content", "bottom"];
 
 /*
     is_dekstop => To deal with dekstop/mobil view
