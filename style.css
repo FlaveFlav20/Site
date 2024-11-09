@@ -54,7 +54,8 @@ body {
     right: 10vh;
     width: min(25vh, 25vw);
     height: min(45vh, 45vw);
-    object-fit: contain;
+    object-fit: fill;
+    border-radius: 10%;
 }
 
 .flags {
@@ -107,7 +108,7 @@ body {
     color: white;
     background-color: #04090f;
     border-top-right-radius: 3%;
-    border-bottom-right-radius: 3%;    
+    border-bottom-right-radius: 3%;
 }
 
 .elem_info {
