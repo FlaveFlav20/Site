@@ -56,6 +56,7 @@ body {
     height: min(45vh, 45vw);
     object-fit: fill;
     border-radius: 10%;
+    left: auto;
 }
 
 .flags {
@@ -108,13 +109,31 @@ body {
     color: white;
     background-color: #04090f;
     border-top-right-radius: 3%;
-    border-bottom-right-radius: 3%;
+    border-bottom-right-radius: 3%; 
+
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.info.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .elem_info {
     display: inherit;
     position: relative;
     font-size: inherit;
+}
+
+.transition-hide {
+    opacity: 0;
+    transition: opacity 3.s;
+}
+
+.transition-show {
+    opacity: 1;
+    transition: opacity 3.s;
 }
 
 .content::-webkit-scrollbar {

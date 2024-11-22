@@ -5,16 +5,19 @@
 // "Height" "Width" "Margin Top" "Margin Right" "Margin Bottom" "Margin left"
 
 const info_dekstop = ['90vh', '20vw', '5vh', '80vw', '5vh', '0'];
-const info_mobile = ['5vh', '100vw', '5vh', '0', '90vh', '0'];
+const info_mobile = ['5vh', '100vw', '5vh', '0', 'auto', '0'];
 
-const content_dekstop = ['90vh', '55vw', '5vh', '25vw', '5vh', '20vw'];
+const info_dekstop_hide = ['90vh', '20vw', '5vh', '80vw', '5vh', '0'];
+const info_mobile_hide = ['0vh', '0vw', '5vh', '0', '90vh', '0'];
+
+const content_dekstop = ['90vh', 'auto', '5vh', '17vw', '5vh', '20vw'];
 const content_mobile = ['85vh', '100vw', '10vh', '0', '5vh', '0'];
 
-const content_dekstop_info_hide = ['90vh', '75vw', '5vh', '25vw', '5vh', '0vw'];
+const content_dekstop_info_hide = ['90vh', '89vw', '5vh', 'auto', '5vh', '0vw'];
 const content_mobile_info_hide = ['90vh', '100vw', '5vh', '0', '5vh', '0'];
 
-const image_dekstop = ["min(25vh, 25vw)", "min(25vh, 25vw)", "37vh", "20vw", "37vh", "70vw"];
-const image_mobile = ["min(25vh, 25vw)", "min(25vh, 25vw)", "70vh", "0vw", "5vh", "70vw"];
+const image_dekstop = ["min(25vh, 25vw)", "min(25vh, 25vw)", "37vh", "2vw", "37vh", "auto"];
+const image_mobile = ["min(25vh, 25vw)", "min(25vh, 25vw)", "auto", "1vw", "6vh", "auto"];
 
 const button_menu_display = ['5vh', '10vw', '0vh', '70vw', '95vh', '20vw'];
 const button_menu_blank = ['5vh', '60vw', '0vh', '20vw', '95vh', '30vw'];
@@ -56,5 +59,7 @@ export {
     content_mobile_info_hide,
     button_menu_display,
     button_menu_blank,
-    button_menu_blank_hide
+    button_menu_blank_hide,
+    info_dekstop_hide,
+    info_mobile_hide
 }
