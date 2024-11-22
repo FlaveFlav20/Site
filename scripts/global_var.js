@@ -8,12 +8,12 @@ const info_dekstop = ['90vh', '20vw', '5vh', '80vw', '5vh', '0'];
 const info_mobile = ['5vh', '100vw', '5vh', '0', 'auto', '0'];
 
 const info_dekstop_hide = ['90vh', '20vw', '5vh', '80vw', '5vh', '0'];
-const info_mobile_hide = ['0vh', '0vw', '5vh', '0', '90vh', '0'];
+const info_mobile_hide = ['5vh', '100vw', '5vh', '0', '90vh', '0'];
 
 const content_dekstop = ['90vh', 'auto', '5vh', '17vw', '5vh', '20vw'];
 const content_mobile = ['85vh', '100vw', '10vh', '0', '5vh', '0'];
 
-const content_dekstop_info_hide = ['90vh', '89vw', '5vh', 'auto', '5vh', '0vw'];
+const content_dekstop_info_hide = ['90vh', 'auto', '5vh', '15', '5vh', '0vw'];
 const content_mobile_info_hide = ['90vh', '100vw', '5vh', '0', '5vh', '0'];
 
 const image_dekstop = ["min(25vh, 25vw)", "min(25vh, 25vw)", "37vh", "2vw", "37vh", "auto"];

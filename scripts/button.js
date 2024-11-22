@@ -83,14 +83,19 @@ function close_lang(event) {
 
 function close_info(event) {
     if (event.target.id === 'display' || event.target.id === 'network button' 
-        || event.target.id === 'display' || event.target.id === 'main-content')
+        || event.target.id === 'display' || event.target.id === 'main-content') {
+
         return;
-    if (!(event.target.tagName === 'DIV'))
+    }
+
+    if (event.target.tagName == 'DIV' || event.target.tagName == 'IMG') {
         return;
+    }
     if (event.target.id === "fr_FR" || event.target.id === "en_EN" || event.target.id === "lang button")
         return;
     if (window.is_info_open)
         set_close_info();
+    lang_win.style.display = 'none';
 }
 
 document.addEventListener('click', function(event) {
