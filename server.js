@@ -19,10 +19,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get("/content/file/*", (req, res) => {
-  res.sendFile(path.join(__dirname, 'contents', 'file', req.params[0]));
-});
-
 app.get("/content/*", (req, res) => {
   res.sendFile(path.join(__dirname, 'contents', req.params[0]));
 });

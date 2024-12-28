@@ -4,14 +4,14 @@ header {
     background-color: #1d1e20;
     width: 100vw;
     top: 0;
-    font-size: min(4vh, 4vw);
+    font-size: min(3vh, 3vw);
     left: 0;
     right: 0;
 }
 
 .menu {
     display: flex;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(255, 255, 255);
     align-items: center;
     font-size: inherit;
     height: 5vh;
@@ -19,15 +19,13 @@ header {
     width: 20vw;
     justify-content: center;
     user-select: none; 
-    border-bottom-left-radius: 3%;
-    border-bottom-right-radius: 1%;
     color: black;
 }
 
 .menu:hover {
     background-color: rgb(255, 255, 255);
     color: white;
-    background-color: #3e3e41;
+    background-color: #acacb3;
 }
 
 .menu-blank {
@@ -37,11 +35,9 @@ header {
     font-size: inherit;
     height: 5vh;
     right: 5vw;
-    width: 60vw;
+    width: 40vw;
     justify-content: center;
-    user-select: none; 
-    border-bottom-left-radius: 3%;
-    border-bottom-right-radius: 1%;
+    user-select: none;
     color: black;
 }
 
@@ -58,7 +54,9 @@ body {
     right: 10vh;
     width: min(25vh, 25vw);
     height: min(45vh, 45vw);
-    object-fit: contain;
+    object-fit: fill;
+    border-radius: 10%;
+    left: auto;
 }
 
 .flags {
@@ -110,14 +108,32 @@ body {
     font-size: min(4vh, 4vw);
     color: white;
     background-color: #04090f;
-    border-top-right-radius: 5%;
-    border-bottom-right-radius: 5%;
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%; 
+
+    opacity: 1;
+    transition: all 250ms ease-in-out;
+}
+
+.info.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .elem_info {
     display: inherit;
     position: relative;
     font-size: inherit;
+}
+
+.transition-hide {
+    opacity: 0;
+    transition: opacity 3.s;
+}
+
+.transition-show {
+    opacity: 1;
+    transition: opacity 3.s;
 }
 
 .content::-webkit-scrollbar {
@@ -143,8 +159,8 @@ footer {
     height: 5vh;
     width: 100vw;
     background-color: rgb(255, 255, 255);
-    border-top-left-radius: 15%;
-    border-top-right-radius: 15%;
+    border-top-left-radius: min(1vh, 1vw);
+    border-top-right-radius: min(1vh, 1vw);
     top: 95vh;
     bottom: 0;
     left: 0;

@@ -4,16 +4,28 @@
 
 // "Height" "Width" "Margin Top" "Margin Right" "Margin Bottom" "Margin left"
 
-const info_dekstop = ['90vh', '20vw', '5vh', '90vw', '10vh', '0'];
-const info_mobile = ['5vh', '100vw', '5vh', '0', '80vh', '0'];
+const info_dekstop = ['90vh', '20vw', '5vh', '80vw', '5vh', '0'];
+const info_mobile = ['5vh', '100vw', '5vh', '0', 'auto', '0'];
 
-const content_dekstop = ['90vh', '55vw', '5vh', '20vw', '10vh', '20vw'];
-const content_mobile = ['90vh', '100vw', '11vh', '0', '5vh', '0'];
+const info_dekstop_hide = ['90vh', '20vw', '5vh', '80vw', '5vh', '0'];
+const info_mobile_hide = ['5vh', '100vw', '5vh', '0', '90vh', '0'];
 
-const image_dekstop = ["90vh", "15vw", "5vh", "0", "5vh", "80vw"]
-const image_mobile = ["15vh", "20vw", "80vh", "10vw", "5vh", "75vw"]
+const content_dekstop = ['90vh', 'auto', '5vh', '17vw', '5vh', '20vw'];
+const content_mobile = ['85vh', '100vw', '10vh', '0', '5vh', '0'];
 
-const elem_to_change_id = ["main-content", "content", "bottom", "network button", "lang button"];
+const content_dekstop_info_hide = ['90vh', 'auto', '5vh', '15', '5vh', '0vw'];
+const content_mobile_info_hide = ['90vh', '100vw', '5vh', '0', '5vh', '0'];
+
+const image_dekstop = ["min(25vh, 25vw)", "min(25vh, 25vw)", "37vh", "2vw", "37vh", "auto"];
+const image_mobile = ["min(25vh, 25vw)", "min(25vh, 25vw)", "auto", "1vw", "6vh", "auto"];
+
+const button_menu_display = ['5vh', '10vw', '0vh', '70vw', '95vh', '20vw'];
+const button_menu_blank = ['5vh', '60vw', '0vh', '20vw', '95vh', '30vw'];
+
+const button_menu_blank_hide = ['5vh', '70vw', '0vh', '20vw', '95vh', '10vw'];
+
+
+const elem_to_change_id = ["main-content", "content", "bottom"];
 
 /*
     is_dekstop => To deal with dekstop/mobil view
@@ -42,5 +54,12 @@ export {
     lang_url,
     elem_to_change_id,
     image_dekstop,
-    image_mobile
+    image_mobile,
+    content_dekstop_info_hide,
+    content_mobile_info_hide,
+    button_menu_display,
+    button_menu_blank,
+    button_menu_blank_hide,
+    info_dekstop_hide,
+    info_mobile_hide
 }
