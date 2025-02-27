@@ -34,9 +34,9 @@ http://localhost:3000/
 
 There are 4 sections
 - 1: header with the menu => never move
-- 4: footer with addtitionnal info => never move
 - 2: infos => move when mobile device
 - 3: Content section => will take the free place from infos (3) if infos diseapears
+- 4: footer with addtitionnal info => never move
 
 ## Dekstop-display
 
@@ -48,7 +48,7 @@ There are 4 sections
 |   2  |        3            |      =>      |             3              |
 |      |                     |              |                            |
 |----------------------------|              |----------------------------|
-|              2             |              |              2             |
+|              4             |              |              4             |
 |----------------------------|              |----------------------------|
 ```
 
