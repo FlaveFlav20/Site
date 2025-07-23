@@ -75,48 +75,46 @@ body {
     align-items: center;
     justify-content: center;
     top: 5vh;
-    right: 0;
+    right: 7vw;
     font-size: min(4vh, 4vw);
     user-select: none;
 }
 
 .elem-select-lang {
-    background-color: rgb(255, 255, 255);
+    background-color: #060E19;;
     align-items: inherit;
     justify-content: inherit;
     color: black;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
     width: 5vw, 5vh;
     height: 5vh;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
+    border-radius: 10%;
+    filter: brightness(0.85) sepia(1) hue-rotate(200deg) saturate(2);
 }
 
 .elem-select-lang-bottom {
-    background-color: rgb(255, 255, 255);
+    background-color: #060E19;;
     align-items: inherit;
     justify-content: inherit;
     color: black;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    width: 5vw, 5vh;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    width: 2vw, 2vh;
     height: 5vh;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+    border-radius: 10%;
+    filter: brightness(0.85) sepia(1) hue-rotate(200deg) saturate(2);
 }
 
 
 .elem-select-lang:hover {
-    background-color: #3e3e41;
-    color: white;
+    filter: none;
 }
 
 .elem-select-lang-bottom:hover {
-    background-color: #3e3e41;
-    color: white;
+    filter: none;
 }
 
 .info {
