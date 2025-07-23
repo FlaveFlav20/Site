@@ -36,7 +36,7 @@ app.get("/content/*", limiter, (req, res) => {
     return res.sendFile(path.join(__dirname, 'public/404_NOTFOUND.html'));;
   }
   else {
-    return res.sendFile(path.join(__dirname, 'public', 'contents', req.params[0]));
+    return res.sendFile(path.join(__dirname, 'public', 'contents', param));
   }
 });
 
